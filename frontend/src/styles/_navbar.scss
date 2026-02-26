@@ -1,0 +1,71 @@
+@import 'variables';
+
+.navbar {
+    height: 70px;
+    @include glass;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $text-main;
+
+        span span {
+            color: $primary-color;
+        }
+    }
+
+    &__icon {
+        color: $primary-color;
+    }
+
+    &__links {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        color: $text-muted;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $text-main;
+        }
+    }
+
+    &__cta {
+        background: linear-gradient(135deg, $primary-color, $primary-dark);
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba($primary-color, 0.4);
+        }
+    }
+}

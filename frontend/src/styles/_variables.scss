@@ -1,0 +1,48 @@
+// Colors
+$primary-color: #6366f1;
+$primary-light: #818cf8;
+$primary-dark: #4f46e5;
+
+$secondary-color: #10b981;
+$accent-color: #f59e0b;
+$danger-color: #ef4444;
+
+$bg-dark: #0f172a;
+$bg-card: #1e293b;
+$bg-input: #334155;
+
+$text-main: #f8fafc;
+$text-muted: #94a3b8;
+$text-dark: #1e293b;
+
+// Breakpoints
+$bp-mobile: 320px;
+$bp-tablet: 641px;
+$bp-desktop: 1024px;
+$bp-wide: 1281px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mobile {
+  @media (min-width: #{$bp-mobile}) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: #{$bp-tablet}) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: #{$bp-desktop}) { @content; }
+}
+
+@mixin glass {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
